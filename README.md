@@ -9,7 +9,7 @@ cd /usr/src
 git clone https://github.com/luizsales/asterisk-tts-voicerss.git
 cd asterisk-tts-voicerss
 chown asterisk.asterisk voicerss_tts.php 
-chmo 755 voicerss_tts.php 
+chmod 755 voicerss_tts.php 
 
 ```
 

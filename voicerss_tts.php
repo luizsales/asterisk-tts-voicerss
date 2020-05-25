@@ -52,10 +52,12 @@ class VoiceRSS
 $texto = $argv[1];
 $voicercode = $argv[2];
 $audioFile = $argv[3];
+$key = $argv[4];
+
 
 $tts = new VoiceRSS;
 $voice = $tts->speech([
-    'key' => '',
+    'key' => $key,
     'hl' => $voicercode,
     'src' => $texto,
     'r' => '-2',

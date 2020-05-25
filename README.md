@@ -20,7 +20,8 @@ Para executar esse exemplo, adicione as linhas abaixo no contexto desejado:
 exten => 1234,1,Answer()
 exten => 1234,n,Set(voicercode=pt-br)
 exten => 1234,n,Set(translated=Ola, Luiz Sales, boa noite!)
-exten => 1234,n,system(/usr/src/asterisk-tts-voicerss/voicerss_tts.php "${translated}" ${voicercode} "/tmp/${UNIQUEID}")
+exten => 1234,n,Set(api_key=123456) ; Subistitua pela sua chave
+exten => 1234,n,system(/usr/src/asterisk-tts-voicerss/voicerss_tts.php "${translated}" ${voicercode} "/tmp/${UNIQUEID}" ${api_key})
 exten => 1234,n,Wait(3)
 exten => 1234,n,Playback(/tmp/${UNIQUEID})  
 ```
